@@ -2,72 +2,38 @@
 {% load static %}
 {% block content%}
 
-            <!--  ************************* Page Title Starts Here ************************** -->
-            <div class="page-nav no-margin row">
-                <div class="container">
-                    <div class="row">
-                        <h2 class="text-start">Our Services</h2>
-                        <ul>
-                            <li> <a href="#"><i class="bi bi-house-door"></i> Home</a></li>
-                            <li><i class="bi bi-chevron-double-right pe-2"></i> Services</li>
-                        </ul>
-                    </div>
+<!--  ************************* Page Title Starts Here ************************** -->
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-start">Our Services</h2>
+            <ul>
+                <li> <a href="#"><i class="bi bi-house-door"></i> Home</a></li>
+                <li><i class="bi bi-chevron-double-right pe-2"></i> Services</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid products bg-gray big-padding pt-3">
+    <div class="container-xl">
+
+        <div class="row mt-5">
+            {% for service in services %}
+            <div class="col-lg-4 mb-4 col-md-6">
+                <div class="cover text-center shadow-md p-5 bg-white">
+                    <img class="w-125" src="{{ service.image.url }}" alt="">
+                    <h2 class="fs-5 fw-bolder mt-4 mb-3">{{ service.title }}</h2>
+                    <p>{{ service.description|safe }}</p>
                 </div>
             </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
-            
 
-
-            <div class="container-fluid products bg-gray big-padding pt-3">
-                <div class="container-xl">
-                    
-                    <div class="row mt-5">
-                        <div class="col-lg-4 mb-4 col-md-6">
-                            <div class="cover text-center shadow-md p-5 bg-white">
-                                <img class="w-125" src="assets/images/services/01.png" alt="">
-                                <h2 class="fs-5 fw-bolder mt-4 mb-3">Digital Marketing</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4 col-md-6">
-                            <div class="cover text-center shadow-md p-5 bg-white">
-                                <img class="w-125" src="assets/images/services/02.png" alt="">
-                                <h2 class="fs-5 fw-bolder mt-4 mb-3">SEO Optimization</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4 col-md-6">
-                            <div class="cover text-center shadow-md p-5 bg-white">
-                                <img class="w-125" src="assets/images/services/03.png" alt="">
-                                <h2 class="fs-5 fw-bolder mt-4 mb-3">Social Marketing</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4 col-md-6">
-                            <div class="cover text-center shadow-md p-5 bg-white">
-                                <img class="w-125" src="assets/images/services/04.png" alt="">
-                                <h2 class="fs-5 fw-bolder mt-4 mb-3">Content Marketing</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4 col-md-6">
-                            <div class="cover text-center shadow-md p-5 bg-white">
-                                <img class="w-125" src="assets/images/services/05.png" alt="">
-                                <h2 class="fs-5 fw-bolder mt-4 mb-3">Data Analysis</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4 col-md-6">
-                            <div class="cover text-center shadow-md p-5 bg-white">
-                                <img class="w-125" src="assets/images/services/07.png" alt="">
-                                <h2 class="fs-5 fw-bolder mt-4 mb-3">Web Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mollis malesuada. Sed suscipit, tortor nec sollicitudin tincidunt nibh. </p>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>  
-        
-
-            {% endblock %}
+{% endblock %}

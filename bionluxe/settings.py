@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-kikxm(4hzv$0z_cn0mn#&9pnv9&(me8n18mu!2=_40(j&!1a3y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainApp',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -111,3 +112,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SUMMERNOTE_CONFIG = {
+    'iframe': False,  
+}

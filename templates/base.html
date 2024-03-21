@@ -37,7 +37,7 @@
                                 <li class="float-start fs-8 p-3 py-2"><i class="bi bi-facebook"></i></li>
                                 <li class="float-start fs-8 p-3 py-2"><i class="bi bi-twitter"></i></li>
                                 <li class="float-start fs-8 p-3 py-2"><i class="bi bi-instagram"></i></li>
-                                <li class="float-start fs-8 p-3 py-2"><i class="bi bi-linkedin"></i></li>
+                                <li class="float-start fs-8 p-3 py-2"><i class="bi bi-tiktok"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -73,11 +73,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="aboutcol bg-gray fs-7 bg-dark shadow-lg p-5">
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                    <p class="mb-2">Rerit libero pellentesque libero interdum, id mattis felis dictum. Praesent eget lacus tempor justo efficitur malesuada. Cras ut suscipit nisi.
-                    </p>
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit libero pellentesque libero interdum, id mattis felis dictum. Praesent eget lacus tempor justo efficitur malesuada. Cras ut suscipit nisi.
-                    </p>
+          <p class="mb-2">{{ about.description |safe|truncatechars:500}}</p>
                 </div>
             </div>
             <div class="col-md-8">
@@ -109,23 +105,22 @@
                     <div class="col-md-6 pt-5">
                         <h4 class="fs-5 fw-bolder text-white">Useful Links</h4>
                         <ul class="row">
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Home</a></li>
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> About Us</a></li>
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Services</a></li>
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Blog</a></li>
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Contact Us</a></li>
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Features</a></li>
-                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Privacy Policy</a></li>
+                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href="{% url 'index' %}"> Home</a></li>
+                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href="{% url 'aboutus' %}"> About Us</a></li>
+                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href="{% url 'services' %}"> Services</a></li>
+                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href="{% url 'blog' %}"> Blog</a></li>
+                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href="{% url 'contact' %}"> Contact Us</a></li>
+                            <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Policies</a></li>
                             <li class="float-start col-md-6 p-2"><a class="text-white fw-bolder" href=""> Refund Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6  pt-5">
-                        <h4 class="fs-5 fw-bolder text-white">Useful Links</h4>
+                        <h4 class="fs-5 fw-bolder text-white">Stay Updated</h4>
 
-                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, vehicula eget eros. </p>
+                        <p class="mb-5">Subscribe to our newsletter to receive the latest updates, news, and promotions directly to your inbox.</p>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control mb-0" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control mb-0" placeholder="Email Address" aria-label="Email Address" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <span class="input-group-text bg-primary" id="basic-addon2"><i class="bi text-white bi-send"></i></span>
                             </div>
@@ -136,7 +131,7 @@
                             <li class="float-start fs-6 p-3 py-2"><i class="bi bi-facebook"></i></li>
                             <li class="float-start fs-6 p-3 py-2"><i class="bi bi-twitter"></i></li>
                             <li class="float-start fs-6 p-3 py-2"><i class="bi bi-instagram"></i></li>
-                            <li class="float-start fs-6 p-3 py-2"><i class="bi bi-linkedin"></i></li>
+                            <li class="float-start fs-6 p-3 py-2"><i class="bi bi-tiktok"></i></li>
                         </ul>
                     </div>
                 </div>
