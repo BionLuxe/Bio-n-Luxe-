@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from mainApp.models import *
-
+from django.contrib import messages
 def index(request):
     slides = Slide.objects.all()
     services = Services.objects.all()
@@ -59,3 +59,13 @@ def blog(request):
         }
 
     return render(request, 'blog.html',context)
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        try:
+            subscriber = Subscriber.objects.create(email=email)
+            messages.success(request, 'Thank you for subscribing!')
+        except Exception as e:
+            messages.error(request, 'Error occurred while subscribing. Please try again later.')
+
+    return render(request, 'subscribe.html')

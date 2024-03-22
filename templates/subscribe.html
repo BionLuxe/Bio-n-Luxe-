@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Bio n Luxe Tech | Subscribe{% endblock %}
+{% block content%}
+<br><br>
+{% if messages %}
+{% for message in messages %}
+    <div style="margin: 20px;"><h1>{{ message }}</h1></div>
+{% endfor %}
+{% endif %}
+
+<br><br>
+{% endblock %}

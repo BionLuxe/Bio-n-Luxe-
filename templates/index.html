@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}Bio n Luxe Tech | Home{% endblock %}
 {% block content%}
            
             <div id="carouselExampleIndicators" class="carousel  slide" data-bs-ride="true">
@@ -78,6 +79,24 @@
             </div>
         </div>
         
+
+            <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+  
+            <div class="row">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Work with us</h3>
+                    <p>Explore our diverse array of customized services designed to fulfill your unique requirements. Whether it's web development or digital marketing, we have the expertise to support your endeavors comprehensively.</p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" href="tel:+256701006010">Call Now</a>
+                </div>
+            </div>
+            
+        </div>
+      </section><!-- End Cta Section -->
+  
         <!--  ************************* Testimonial Start Here ************************** --> 
 
         <div id="testimonial" class="service bg-honey container-fluid px-4 py-5">
@@ -178,6 +197,79 @@
                 </div>
             </div>
         </div>
-        
+ 
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Subscribe to our newsletter to receive the latest updates, news, and promotions directly to your inbox</p>
+                        <form action="{% url 'subscribe' %}" method="post">
+                            {% csrf_token %}
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                            <input type="submit" value="Subscribe">
+                        </form>
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div>{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <style>
+            .cta {
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("static/assets/images/cta-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #fff;
+}
+
+.cta .cta-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cta .cta-btn:hover {
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .cta .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+        </style>
         {% endblock %}
         
