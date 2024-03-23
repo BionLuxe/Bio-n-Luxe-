@@ -69,3 +69,7 @@ def subscribe(request):
             messages.error(request, 'Error occurred while subscribing. Please try again later.')
 
     return render(request, 'subscribe.html')
+
+
+def policy(request):
+    return render(request, 'policies.html')
